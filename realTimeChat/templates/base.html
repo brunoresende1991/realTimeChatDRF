@@ -1,0 +1,27 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>
+        {% block title %}
+        Real Time Chat
+        {% endblock %}
+    </title>
+    
+    <link rel="icon"
+      type="image/x-icon"
+      href="{% static 'img/favicon.ico' %}">
+
+    {% tailwind_css %}
+</head>
+
+<body class="bg-gray-100">
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
