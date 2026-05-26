@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<script 
+  defer
+  src="{% static 'js/chat.js' %}">
+</script>
+
+<div class="h-screen p-5 pb-[20px]">
+  <div class="h-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl flex flex-col overflow-hidden">
+    <!-- Header -->
+    <div class="bg-sky-600 text-white px-6 py-4 font-semibold">
+      Live Chat
+    </div>
+
+    <!-- Messages -->
+    <div
+      id="chatMessages"
+      class="flex-1 overflow-y-auto p-6 space-y-4 bg-slate-50">
+    </div>
+
+    <!-- Footer -->
+    <div class="p-5 border-t bg-white">
+      <div class="flex gap-3 items-center">
+        <input
+          id="chatInput"
+          type="text"
+          placeholder="Type a message..."
+          class="flex-1 rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-sky-500 
+            focus:border-sky-500 transition-all"
+        >
+        <button
+          id="sendButton"
+          class="px-5 py-3 rounded-xl bg-sky-600 text-white font-medium shadow hover:bg-sky-700 active:scale-95 transition-all">
+            Send
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
