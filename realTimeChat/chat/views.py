@@ -1,4 +1,5 @@
-from django.template.response import TemplateResponse
+from django.views.generic import TemplateView
 
-def index(request):
-    return TemplateResponse(request, "chat.html", {})
+
+class ChatView(TemplateView):
+    template_name = "chat.html"

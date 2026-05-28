@@ -140,3 +140,5 @@ CHANNEL_LAYERS = {
 }
 
 TAILWIND_APP_NAME = "theme"
+LOGIN_REDIRECT_URL = '/chat/' # Redireciona para o chat após o login
+LOGIN_URL = '/users/login/' # URL para a página de login
